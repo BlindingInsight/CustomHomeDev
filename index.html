@@ -8,18 +8,15 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-serif font-semibold">London Rd LLC</h1>
-      <nav class="space-x-4">
-        <a href="portfolio.html" class="text-gray-700 hover:text-gold-600">Portfolio</a>
-        <a href="investors.html" class="text-gray-700 hover:text-gold-600">Investor Access</a>
-        <a href="contact.html" class="text-gray-700 hover:text-gold-600">Contact</a>
-        <a href="about.html" class="text-gray-700 hover:text-gold-600">About</a>
-      </nav>
-    </div>
-  </header>
+<!-- Load Navbar -->
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar').innerHTML = html;
+    });
+</script>
 
   <!-- Hero Section -->
   <section class="bg-cover bg-center h-[85vh] flex items-center justify-center text-white text-center" style="background-image: url('https://ssl.cdn-redfin.com/photo/9/bigphoto/312/421614312_17_3.jpg'); background-blend-mode: multiply; background-color: rgba(0,0,0,0.5);">
