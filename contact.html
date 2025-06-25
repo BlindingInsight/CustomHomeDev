@@ -8,18 +8,15 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-serif font-semibold">London Rd LLC</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="text-gray-700 hover:text-gold-600">Home</a>
-        <a href="portfolio.html" class="text-gray-700 hover:text-gold-600">Portfolio</a>
-        <a href="investors.html" class="text-gray-700 hover:text-gold-600">Investor Access</a>
-        <a href="about.html" class="text-gray-700 hover:text-gold-600">About</a>
-      </nav>
-    </div>
-  </header>
+<!-- Load Navbar -->
+<div id="navbar"></div>
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar').innerHTML = html;
+    });
+</script>
 
   <!-- Hero -->
   <section class="bg-gray-900 text-white py-20 text-center">
