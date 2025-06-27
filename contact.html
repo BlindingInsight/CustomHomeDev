@@ -17,6 +17,7 @@
         .then(html => {
           document.getElementById('navbar').innerHTML = html;
 
+          // Highlight current nav link
           const currentPath = window.location.pathname.split('/').pop() || 'index.html';
           document.querySelectorAll('#navbar .nav-link').forEach(link => {
             const linkPath = link.getAttribute('href');
@@ -25,6 +26,7 @@
             }
           });
         });
+    });
   </script>
 
   <!-- Contact Form -->
@@ -32,10 +34,9 @@
     <h1 class="text-3xl font-serif font-bold mb-6 text-center">Contact Us</h1>
 
     <form action="https://formsubmit.co/subbuk@gmail.com" method="POST" class="space-y-6">
-      <!-- Hidden settings -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://www.londonrd.llc/thanks.html">
-      <input type="text" name="_honey" style="display:none"> <!-- spam bot trap -->
+      <input type="text" name="_honey" style="display:none">
 
       <div>
         <label for="name" class="block font-semibold mb-1">Name</label>
